@@ -7,5 +7,8 @@
   developers cloning this repo won't be able to run the project as is.
  */
 module.exports = {
-
+  JWT_SECRET: process.env.JWT_SECRET || 'shh'
 }
+// this allows developers cloning this project, but maybe not having their environment set up to be able to run the project
+// after this step, create .env file to have JWT_SECRET = shh, install dependencies (npm i), install config.env (npm i dotenv)
+// then go to index.js, require('dotenv').config()
